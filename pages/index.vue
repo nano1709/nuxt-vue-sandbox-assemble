@@ -4,7 +4,7 @@
 
     <ul>
         <li v-for="routerItem in routerItems" :key="routerItem.id">
-          <NuxtLink :to="item.pageFileName">
+          <NuxtLink :to="routerItem.pageFileName">
             {{ routerItem.textToDisplay }}
           </NuxtLink>
         </li>
