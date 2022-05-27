@@ -22,9 +22,9 @@ export default Vue.extend({
   data(){
     return {
       routerItems: [
-        { id: 1, pageFileName: 'Tutorial', textToDisplay: 'Go to tutorial' },
-        { id: 2, pageFileName: 'Blog voting page', textToDisplay: 'Blog voting page' },
-        { id: 3, pageFileName: 'Toggle switch page', textToDisplay: 'Toggle switch page' },
+        { id: 1, pageFileName: 'tutorial', textToDisplay: 'Go to tutorial' },
+        { id: 2, pageFileName: 'gitHubProfileSearch', textToDisplay: 'Go to GitHub profile' },
+        { id: 3, pageFileName: 'cards', textToDisplay: 'Go to cards' },
         { id: 4, pageFileName: 'TODO', textToDisplay: 'TODO' },
       ]     
     }
