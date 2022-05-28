@@ -1,6 +1,6 @@
 <template>
   <main>
-    GitHub profile for User: 
+    Search GitHub User: 
     <input v-model="gitUserName">
     <button @click="getGitHubProfile(gitUserName)">Search</button>
     <div v-if="!this.isLoading">
