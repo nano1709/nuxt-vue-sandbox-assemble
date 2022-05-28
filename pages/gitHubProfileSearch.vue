@@ -3,9 +3,10 @@
     Search GitHub User: 
     <input v-model="gitUserName">
     <button @click="getGitHubProfile(gitUserName)">Search</button>
-    <div v-if="!this.isLoading">
+    <div v-if="!this.$fetchState.pending">
       <GitHubUser :gitUserData="gitUserData"></GitHubUser>
     </div>
+    <p v-else-if="$fetchState.error">Error while fetching the user</p>
     <div v-else>
       <Loading></Loading>
     </div>
@@ -14,7 +15,6 @@
 
 <script>
 import Vue from 'vue';
-import axios from 'axios';
 import GitHubUser from '../components/GitHubUser.vue';
 import Loading from '../components/Loading.vue';
 
@@ -34,26 +34,18 @@ export default Vue.extend({
   methods: {
       async getGitHubProfile(gitUserName) {
           this.isLoading = true;
-          await axios
-            .get(`https://api.github.com/users/${gitUserName}`)
-            .then(response => {
-              this.gitUserData = response.data;
-            })
-            .catch(error => {
-              alert('Something went wrong. Blame the developer :)')
-              this.gitUserData = {};
-            })
-            .finally(() => { this.isLoading = false })
+          this.gitUserData = await this.$axios.$get(`https://api.github.com/users/${gitUserName}`)
+          this.isLoading = false;
       },
   },
   // Interesting - this doesn't work with browser built in reload
   async fetch(){
       this.getGitHubProfile(this.gitUserName);
   },
+  // Interesting - works with browser built in reload
   mounted(){
     this.getGitHubProfile(this.gitUserName);
   },
-  
 })
 
 </script>
