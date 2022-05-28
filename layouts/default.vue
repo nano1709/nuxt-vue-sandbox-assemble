@@ -68,7 +68,7 @@
       <div id="content">
         <Nuxt/>
       </div>
-      <div class="footer">Nacho &#169;</div>
+      <div class="footer">Copyright &#169; 2022 by nano1709 </div>
     </div>
   </div>
 </template>

@@ -1,3 +1,4 @@
+
 <template>
   <main>
     <h1>Welcome to my first Nuxt page</h1>
