@@ -39,7 +39,6 @@
   transform: translate(-50%, -50%);
   height: 600px;
   width: 800px;
-  background: #f2f2f2;
   overflow: hidden;
   border-radius: 20px;
   cursor: pointer;
