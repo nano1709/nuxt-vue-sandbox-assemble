@@ -30,7 +30,7 @@ export default Vue.extend({
         gitUserData: {},
         isLoading: true,
     }
-  }, 
+  },
   methods: {
       async getGitHubProfile(gitUserName) {
           this.isLoading = true;
@@ -43,12 +43,17 @@ export default Vue.extend({
               alert('Something went wrong. Blame the developer :)')
               this.gitUserData = {};
             })
-            this.isLoading = false;
-      }
+            .finally(() => { this.isLoading = false })
+      },
+  },
+  // Interesting - this doesn't work with browser built in reload
+  async fetch(){
+      this.getGitHubProfile(this.gitUserName);
   },
   mounted(){
-      this.getGitHubProfile(this.gitUserName);
-  }
+    this.getGitHubProfile(this.gitUserName);
+  },
+  
 })
 
 </script>

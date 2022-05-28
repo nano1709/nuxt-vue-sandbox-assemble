@@ -8,6 +8,12 @@ export default {
     htmlAttrs: {
       lang: 'en'
     },
+    script: [
+      {
+        src: "https://kit.fontawesome.com/b07f814c23.js",
+        crossorigin: "anonymous"
+      },
+    ],
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

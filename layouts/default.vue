@@ -1,8 +1,12 @@
 <style>
-
 #nav{
-  text-align: center;
   line-height:30px;
+}
+
+.top{
+  position: absolute;
+  right: 10px;
+  top: 20px;
 }
     
 #nav li {
@@ -58,6 +62,9 @@
       </ul>
     </div>
     <div class="container">
+      <div class="top">
+        <RefreshButton></RefreshButton>
+      </div>
       <div id="content">
         <Nuxt/>
       </div>
@@ -68,11 +75,15 @@
 
 <script>
 import Vue from 'vue';
+import RefreshButton from '~/components/RefreshButton.vue';
 
 // TODO - figure out how to implement interfaces for type safety (IRouterItem)
 // TODO - styling
 export default Vue.extend({
   name: 'IndexPage',
+  components: {
+    RefreshButton
+  },
   data(){
     return {
       routerItems: [
@@ -83,6 +94,11 @@ export default Vue.extend({
       ]     
     }
   },
+  methods: {
+    refresh() {
+      this.$nuxt.refresh()
+    }
+  }
 })
 
 </script>
