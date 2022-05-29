@@ -17,3 +17,6 @@ body {
 .page-leave-to {
   opacity: 0;
 }
+.scrollDiv{
+  overflow: auto; height:500px;
+}

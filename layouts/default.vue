@@ -90,6 +90,7 @@ export default Vue.extend({
         { id: 1, pageFileName: '/', textToDisplay: 'Home' },
         { id: 3, pageFileName: 'gitHubProfileSearch', textToDisplay: 'Go to GitHub profile' },
         { id: 4, pageFileName: 'todos', textToDisplay: 'Go to TODOs' },
+        { id: 4, pageFileName: 'shop', textToDisplay: 'Shop' },
       ]     
     }
   },
