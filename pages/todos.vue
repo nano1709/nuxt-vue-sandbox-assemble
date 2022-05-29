@@ -2,7 +2,7 @@
     <div>
         <h3>Made with <i class="fa-solid fa-heart"></i> with nuxt store</h3>
         <input @keyup.enter="addTodo" placeholder="What needs to be done?">
-        <div style="overflow: auto; height:500px;">
+        <div class="scrollDiv">
             <ul style="list-style: none;">
                 <li v-for="(todo, index) in todos" :key="index">
                     <input :checked="todo.done" @change="toggle(todo)" type="checkbox">
