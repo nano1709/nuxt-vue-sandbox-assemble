@@ -1,7 +1,7 @@
 <style scoped>
 .wrapper {
     margin: 0 auto;
-    width: 960px;
+    width: 858px;
 }
 
 .column {

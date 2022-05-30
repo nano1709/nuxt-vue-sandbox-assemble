@@ -8,8 +8,8 @@ export const mutations = {
         state.productsInCart.push(item);
         state.total += item.price;
     },
-    removeItem(state, {item, cartIndex}) {
-        state.productsInCart.splice(cartIndex, 1);
+    removeItem(state, {item, itemIndex}) {
+        state.productsInCart.splice(itemIndex, 1);
         state.total -= item.price;
     },
 }

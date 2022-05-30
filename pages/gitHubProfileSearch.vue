@@ -23,7 +23,7 @@ export default Vue.extend({
   components: {
     GitHubUser,
     Loading,
-},
+  },
   data(){
     return {
         gitUserName: 'nano1709',

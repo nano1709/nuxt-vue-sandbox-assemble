@@ -27,8 +27,8 @@ export default {
     }
   },
   methods: {
-    async removeItem(item, index) {
-      this.$store.commit('cart/removeItem', {item, index});
+    async removeItem(item, itemIndex) {
+      this.$store.commit('cart/removeItem', {item, itemIndex});
     }
   }
 }
