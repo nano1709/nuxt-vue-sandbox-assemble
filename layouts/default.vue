@@ -89,8 +89,8 @@ export default Vue.extend({
       routerItems: [
         { id: 1, pageFileName: '/', textToDisplay: 'Home' },
         { id: 3, pageFileName: 'gitHubProfileSearch', textToDisplay: 'Go to GitHub profile' },
-        { id: 4, pageFileName: 'todos', textToDisplay: 'Go to TODOs' },
-        { id: 4, pageFileName: 'shop', textToDisplay: 'Shop' },
+        { id: 4, pageFileName: 'todos', textToDisplay: 'Go to To do list' },
+        { id: 4, pageFileName: 'shop', textToDisplay: 'Got to Shop' },
       ]     
     }
   },
