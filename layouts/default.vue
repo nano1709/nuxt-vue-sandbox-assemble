@@ -91,6 +91,7 @@ export default Vue.extend({
         { id: 3, pageFileName: 'gitHubProfileSearch', textToDisplay: 'Go to GitHub profile' },
         { id: 4, pageFileName: 'todos', textToDisplay: 'Go to To do list' },
         { id: 4, pageFileName: 'shop', textToDisplay: 'Got to Shop' },
+        { id: 5, pageFileName: 'tailwindTestPage', textToDisplay: 'Got to Tailwind Test Page' },
       ]     
     }
   },
